@@ -17,3 +17,10 @@ suites:
     run_list:
       - recipe[git::default]
     attributes:
+  - name: server
+    run_list:
+      - recipe[git::server]
+    attributes:
+    excludes:
+      - centos-7.0  # Getting CentOS working with Git Daemon and runit is, well, kinda nuts
+      - centos-6.6  # So should we leave a Platform/Suite combination lying around that we know we won't support? Naw!

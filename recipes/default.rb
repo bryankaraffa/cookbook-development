@@ -4,4 +4,4 @@ else
   package "git"
 end
 
-log "Package git was installed."
+log "*** Package `git` was installed."
